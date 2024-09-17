@@ -1,0 +1,284 @@
+imports:
+  "@flyde/stdlib":
+    - InlineValue
+    - Concat
+    - Delay
+    - Replace
+    - CodeExpression
+    - JSON Parse
+  replace-in-template.flyde.ts:
+    - ReplaceInTemplate
+node:
+  instances:
+    - pos:
+        x: -537.4834765625
+        y: 274.63247863769527
+      id: ReplaceInTemplate-3704bh3
+      inputConfig: {}
+      visibleInputs:
+        - outputDir
+        - fileName
+        - templatePath
+        - replacements
+        - __trigger
+      nodeId: ReplaceInTemplate
+    - pos:
+        x: -510.1484301757812
+        y: -48.40614901528767
+      id: Example-wee4br2
+      inputConfig: {}
+      nodeId: InlineValue__Example-wee4br2
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: .tsx
+    - pos:
+        x: -541.5828735351563
+        y: 60.325051546235755
+      id: Example-fh04b3u
+      inputConfig: {}
+      nodeId: Concat
+    - pos:
+        x: -1214.013115234375
+        y: -191.17873202310017
+      id: Example-3414b44
+      inputConfig: {}
+      nodeId: InlineValue__Example-3414b44
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: ./src/
+    - pos:
+        x: -831.6112597656252
+        y: -135.1412615307262
+      id: pwur0a6qez75m1bbdhlyny8y
+      inputConfig: {}
+      nodeId: InlineValue__pwur0a6qez75m1bbdhlyny8y
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: ./template/Macro.tsx
+    - pos:
+        x: -72.71604064754024
+        y: 120.99963504392372
+      id: Example-mb44bei
+      inputConfig: {}
+      visibleInputs:
+        - value
+        - __trigger
+      nodeId: Delay__Example-mb44bei
+      macroId: Delay
+      macroData:
+        delayMs:
+          value: 200
+          mode: static
+    - pos:
+        x: 22.661136745017984
+        y: -53.1120358692327
+      id: xgnpu8xnzanjmufhlnpl78su
+      inputConfig: {}
+      nodeId: InlineValue__xgnpu8xnzanjmufhlnpl78su
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: Hello
+    - pos:
+        x: -1019.6507373046875
+        y: -517.3324305633762
+      id: d3b7rjhfsvdz094aa0dvj2q1
+      inputConfig: {}
+      nodeId: InlineValue__d3b7rjhfsvdz094aa0dvj2q1
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: '{"from":"\\/\\*\\[\\[\\[name\\]\\]\\]\\*\\/","to":""/*[[[inname]]]*/""}'
+    - pos:
+        x: -442.38699707031253
+        y: -366.7689808563449
+      id: Replace-9u94bv7
+      inputConfig: {}
+      nodeId: Replace
+    - pos:
+        x: -384.9674267578125
+        y: -613.4084535125949
+      id: oftjud16ekytiqev8qz3ca73
+      inputConfig: {}
+      nodeId: InlineValue__oftjud16ekytiqev8qz3ca73
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: '"\\/*[[[intest]]]*\\/"'
+    - pos:
+        x: -174.46133789062503
+        y: -363.2460011200168
+      id: Example-oxa4boo
+      inputConfig: {}
+      nodeId: Replace
+    - pos:
+        x: 20.43595458984376
+        y: -581.6004395965792
+      id: Example-qqb4bhh
+      inputConfig: {}
+      nodeId: InlineValue__Example-qqb4bhh
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: '"/*[[[inname]]]*/"'
+    - pos:
+        x: -356.0272216796875
+        y: 8.03459931378461
+      id: hfylkat481eygtby5nc99l2t
+      inputConfig: {}
+      nodeId: CodeExpression__hfylkat481eygtby5nc99l2t
+      macroId: CodeExpression
+      macroData:
+        value: "[inputs.firstName,inputs.lastName]"
+    - pos:
+        x: -110.28190185546873
+        y: -706.9609400848606
+      id: Example-9504bxv
+      inputConfig: {}
+      nodeId: InlineValue__Example-9504bxv
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: '{"from":"\\/\\*\\[\\[\\[test\\]\\]\\]\\*\\/","to":""\\/*[[[intest]]]*\\/""}'
+    - pos:
+        x: -378.69934814453126
+        y: -130.10022479845966
+      id: JSON Parse-t904bwg
+      inputConfig: {}
+      nodeId: JSON Parse
+    - pos:
+        x: -179.7128369140625
+        y: -124.89038593127216
+      id: Example-td14bip
+      inputConfig: {}
+      nodeId: JSON Parse
+  connections:
+    - from:
+        insId: Example-wee4br2
+        pinId: value
+      to:
+        insId: Example-fh04b3u
+        pinId: b
+    - from:
+        insId: __this
+        pinId: name
+      to:
+        insId: Example-fh04b3u
+        pinId: a
+    - from:
+        insId: Example-3414b44
+        pinId: value
+      to:
+        insId: ReplaceInTemplate-3704bh3
+        pinId: outputDir
+    - from:
+        insId: Example-fh04b3u
+        pinId: value
+      to:
+        insId: ReplaceInTemplate-3704bh3
+        pinId: fileName
+    - from:
+        insId: pwur0a6qez75m1bbdhlyny8y
+        pinId: value
+      to:
+        insId: ReplaceInTemplate-3704bh3
+        pinId: templatePath
+    - from:
+        insId: Example-mb44bei
+        pinId: delayedValue
+      to:
+        insId: ReplaceInTemplate-3704bh3
+        pinId: __trigger
+    - from:
+        insId: xgnpu8xnzanjmufhlnpl78su
+        pinId: value
+      to:
+        insId: Example-mb44bei
+        pinId: value
+    - from:
+        insId: d3b7rjhfsvdz094aa0dvj2q1
+        pinId: value
+      to:
+        insId: Replace-9u94bv7
+        pinId: string
+    - from:
+        insId: __this
+        pinId: name
+      to:
+        insId: Replace-9u94bv7
+        pinId: replaceValue
+    - from:
+        insId: __this
+        pinId: test
+      to:
+        insId: Example-oxa4boo
+        pinId: replaceValue
+    - from:
+        insId: Example-9504bxv
+        pinId: value
+      to:
+        insId: Example-oxa4boo
+        pinId: string
+    - from:
+        insId: hfylkat481eygtby5nc99l2t
+        pinId: value
+      to:
+        insId: ReplaceInTemplate-3704bh3
+        pinId: replacements
+    - from:
+        insId: Replace-9u94bv7
+        pinId: value
+      to:
+        insId: JSON Parse-t904bwg
+        pinId: json
+    - from:
+        insId: JSON Parse-t904bwg
+        pinId: object
+      to:
+        insId: hfylkat481eygtby5nc99l2t
+        pinId: firstName
+    - from:
+        insId: Example-oxa4boo
+        pinId: value
+      to:
+        insId: Example-td14bip
+        pinId: json
+    - from:
+        insId: Example-td14bip
+        pinId: object
+      to:
+        insId: hfylkat481eygtby5nc99l2t
+        pinId: lastName
+    - from:
+        insId: oftjud16ekytiqev8qz3ca73
+        pinId: value
+      to:
+        insId: Example-oxa4boo
+        pinId: searchValue
+    - from:
+        insId: Example-qqb4bhh
+        pinId: value
+      to:
+        insId: Replace-9u94bv7
+        pinId: searchValue
+  id: Example
+  inputs:
+    name:
+      mode: required
+    test:
+      mode: required
+  outputs: {}
+  inputsPosition:
+    name:
+      x: -480.00934570312495
+      y: -492.7230041503906
+    test:
+      x: -222.08370117187502
+      y: -500.9913818359375
+  outputsPosition:
+    result:
+      x: -23.264428942324532
+      y: 237.25953921502617

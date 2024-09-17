@@ -1,0 +1,49 @@
+imports:
+  "@flyde/stdlib":
+    - InlineValue
+  ..\src\Macro.flyde.ts:
+    - Macro
+  ./replace-in-template.flyde.ts:
+    - ReplaceInTemplate
+node:
+  instances:
+    - pos:
+        x: -158.02097900390623
+        y: -196.4692401123047
+      id: eve6jkmsw0ra643k1x1p15vx
+      inputConfig: {}
+      nodeId: InlineValue__eve6jkmsw0ra643k1x1p15vx
+      macroId: InlineValue
+      macroData:
+        type: string
+        value: Hello
+    - pos:
+        x: -175.70669433593753
+        y: -38.122119140625
+      id: jaocvkmgrra8tkgp3vquo0l5
+      inputConfig: {}
+      nodeId: Macro__jaocvkmgrra8tkgp3vquo0l5
+      macroId: Macro
+      macroData:
+        label: hello,world
+    - pos:
+        x: -555.96
+        y: -379.96
+      id: ReplaceInTemplate-qh04b8w
+      inputConfig: {}
+      nodeId: ReplaceInTemplate
+  connections:
+    - from:
+        insId: eve6jkmsw0ra643k1x1p15vx
+        pinId: value
+      to:
+        insId: jaocvkmgrra8tkgp3vquo0l5
+        pinId: in
+  id: Example
+  inputs: {}
+  outputs: {}
+  inputsPosition: {}
+  outputsPosition:
+    result:
+      x: -23.264428942324532
+      y: 237.25953921502617

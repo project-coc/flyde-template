@@ -3,10 +3,10 @@ import { MacroEditorComp } from "@flyde/core";
 import { Config } from "./Macro.flyde";
 import {} from "@blueprintjs/core";
 
-export const MacroEditor: MacroEditorComp<Config> = ({}) => {
+export const /*[[[name]]]*/Editor: MacroEditorComp<Config> = ({}) => {
   return (
     <h1>hello,world</h1>
   );
 };
 
-export default MacroEditor;
+export default /*[[[name]]]*/Editor;

@@ -10,10 +10,9 @@ export const Macro: MacroNode<Config> = {
   defaultStyle: {
     icon: "comment",
   },
-  description: "A comment node for documentation purposes",
+  description: "Macro node",
   runFnBuilder: (config) => {
-    return (inputs, outputs) => {
-      config.label = inputs.in.value
+    return (_,outputs) => {
       outputs.out.next(config.label)
     };
   },
